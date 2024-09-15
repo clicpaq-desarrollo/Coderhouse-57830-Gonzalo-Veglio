@@ -1,0 +1,49 @@
+{% extends 'core/base_admin.html' %}
+
+{% block main %}
+        <div class="container mt-4">
+            <h1 class="mt-4">Lista de camiones</h1>
+         <table class="table table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Marca</th>  
+                    <th>Modelo</th>
+                    <th>Patente</th>  
+                    <th>Capacidad maxima(kg)</th> 
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for object in object_list %}
+                <tr>
+                    <td>{{object.id}}</td>
+                    <td>{{object.marca | capfirst}}</td> 
+                    <td>{{object.modelo}}</td>
+                    <td>{{object.patente}}</td> 
+                    <td>{{object.capacidad_maxima}}</td> 
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="{% url 'camiones:camion_edit' object.id %}" type="button" class="btn btn-primary"><i class="bi-pencil-fill"></i></a>
+                            <!-- Botón para abrir el modal de confirmación de eliminación -->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-delete-url="{% url 'camiones:camion_delete' object.id %}" data-delete-name="{{ object.marca }}, {{ object.modelo }}">
+                              <i class="bi-trash-fill"></i>
+                            </button>
+                          </div>
+                    </td>
+                </tr>
+                {% empty %}
+                <p>No hay registros</p>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="{% url 'camiones:camion_create' %} ">
+      <div class="to-top">
+        <i class="bi-plus"></i>
+      </div>
+    </a>
+    
+    
+    {% include 'core/componentes/modal_confirm_delete.html' %}
+    {% endblock main %}

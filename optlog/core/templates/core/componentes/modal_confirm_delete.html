@@ -1,0 +1,40 @@
+<!-- Modal de confirmación de eliminación -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Confirmar Eliminación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Aquí se mostrará el nombre del cliente a eliminar -->
+        <p id="deleteModalText"></p>
+      </div>
+      <div class="modal-footer">
+        <form id="deleteForm" method="post">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript para hacer el modal dinámico -->
+<script>
+  const deleteModal = document.getElementById('deleteModal');
+  deleteModal.addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;  // El botón que abrió el modal
+    const deleteUrl = button.getAttribute('data-delete-url');  // Obtener la URL del atributo
+    const deleteName = button.getAttribute('data-delete-name');  // Obtener el nombre del cliente
+    
+    // Actualizar el texto del modal con el nombre del cliente
+    const modalText = deleteModal.querySelector('#deleteModalText');
+    modalText.textContent = `¿Estás seguro de que deseas eliminar el registro: "${deleteName}"?`;
+    
+    // Actualizar el action del formulario con la URL de eliminación
+    const deleteForm = deleteModal.querySelector('#deleteForm');
+    deleteForm.action = deleteUrl;
+  });
+</script>
