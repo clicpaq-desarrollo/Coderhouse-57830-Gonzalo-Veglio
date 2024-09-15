@@ -1,0 +1,107 @@
+<div id="layoutSidenav_nav">
+  <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+    <div class="sb-sidenav-menu">
+      <div class="nav">
+        <div class="sb-sidenav-menu-heading">Dashboard</div>
+        <a class="nav-link" href="#">
+          <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+          Graficos
+        </a>
+        <div class="sb-sidenav-menu-heading">Interface</div>
+        <!-- Envios -->
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEnvios" aria-expanded="false" aria-controls="collapseEnvios">
+          <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+          Envios
+          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+        <div class="collapse" id="collapseEnvios" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+          <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{% url 'envios:envios_list' %}">Nuevo envío</a>
+            <a class="nav-link" href="{% url 'envios:envio_create' %}">Listar envios</a>
+          </nav>
+        </div>
+
+        <!-- Hoja de ruta -->
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseHdr" aria-expanded="false" aria-controls="collapseHdr">
+          <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+          Hoja de ruta
+          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+        <div class="collapse" id="collapseHdr" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+          <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{% url 'hdr:hdrs_list' %}">Ver</a>
+            <a class="nav-link" href="{% url 'hdr:hdr_create' %}">Crear</a>
+          </nav>
+        </div>
+
+        <!-- Clientes -->
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseClientes" aria-expanded="false" aria-controls="collapseClientes">
+          <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+          Clientes
+          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+        <div class="collapse" id="collapseClientes" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
+          <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{% url 'clientes:cliente_list' %}">Ver</a>
+            <a class="nav-link" href="{% url 'clientes:cliente_create' %}">Crear</a>
+          </nav>
+        </div>
+
+        <!-- Productos -->
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProductos" aria-expanded="false" aria-controls="collapseProductos">
+          <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
+          Productos
+          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+        <div class="collapse" id="collapseProductos" aria-labelledby="headingFour" data-bs-parent="#sidenavAccordion">
+          <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{% url 'productos:productos_list' %}">Ver</a>
+            <a class="nav-link" href="{% url 'productos:producto_create' %}">Crear</a>
+          </nav>
+        </div>
+
+        <!-- Administración -->
+        <div class="sb-sidenav-menu-heading">Administración</div>
+
+
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseCamiones" aria-expanded="false" aria-controls="collapseCamiones">
+          <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
+          Camiones
+          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+        <div class="collapse" id="collapseCamiones" aria-labelledby="headingFour" data-bs-parent="#sidenavAccordion">
+          <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{% url 'camiones:camiones_list' %}">Ver</a>
+            <a class="nav-link" href="{% url 'camiones:camion_create' %}">Crear</a>
+          </nav>
+        </div>
+
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseChoferes" aria-expanded="false" aria-controls="collapseChoferes">
+          <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
+          Chofer
+          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+        </a>
+        <div class="collapse" id="collapseChoferes" aria-labelledby="headingFour" data-bs-parent="#sidenavAccordion">
+          <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{% url 'choferes:choferes_list' %}">Ver</a>
+            <a class="nav-link" href="{% url 'choferes:chofer_create' %}">Crear</a>
+          </nav>
+        </div>
+
+
+        <a class="nav-link" href="#">
+          <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+          Usuarios
+        </a>
+        <a class="nav-link" href="{% url 'admin:index' %}">
+          <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+          Admin Django
+        </a>
+      </div>
+    </div>
+    <div class="sb-sidenav-footer">
+      <div class="small">Logged in as:</div>
+      Start Bootstrap
+    </div>
+  </nav>
+</div>

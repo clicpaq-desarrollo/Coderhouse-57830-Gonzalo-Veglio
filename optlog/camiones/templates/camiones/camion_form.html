@@ -1,0 +1,17 @@
+{% extends 'core/base_admin.html' %}
+
+{% block main %}
+      <div class="container mt-4">
+        <h1>{% if object %}Editar Camion{% else %}Crear Camion{% endif %}</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="{% url 'camiones:camiones_list' %}" class="btn btn-secondary">Cancelar</a>
+          </form> 
+        </div>
+        
+        
+            
+        {% endblock main %}
+        

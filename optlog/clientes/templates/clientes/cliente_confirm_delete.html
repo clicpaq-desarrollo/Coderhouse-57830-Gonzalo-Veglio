@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link href="{% static 'core/css/admin/styles.css' %}" rel="stylesheet" />
+{% endblock extra_styles %}
+
+ 
+
+{% block main %}
+<div id="layoutSidenav">
+{% include 'core/componentes/sidebar.html' %}
+  <div id="layoutSidenav_content">
+
+    <main>
+      <div class="container mt-5">
+        <h2>Confirmar Eliminación</h2>
+        <p>¿Estás seguro de que deseas eliminar el cliente "{{ object.nombre }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="{% url 'clientes:cliente_list' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+    </main>    
+    </div>
+</div>
+    
+{% endblock main %}
+
+
+{% block extra_scripts %}
+<script src="{% static 'core/js/admin/scripts.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<script src="{% static 'core/assets/admin/demo/chart-area-demo.js' %}"></script>
+<script src="{% static 'core/assets/admin/demo/chart-bar-demo.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+<script src="{% static 'core/js/admin/datatables-simple-demo.js' %}"></script>
+
+{% endblock extra_scripts %}
