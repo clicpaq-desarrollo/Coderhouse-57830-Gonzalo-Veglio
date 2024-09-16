@@ -9,9 +9,23 @@
       <strong>Numero de guia: </strong>{{envio.guia}}</li>
     </div>
 
-    <div>
-      <span class="badge text-bg-success">
-        {{ envio.tracking.last.estado }}</span>
+    <div><span class="badge fs-5 p-2 
+      {% if object.tracking.last.estado == 'en_proceso_despacho' %}
+          text-bg-primary
+      {% elif object.tracking.last.estado == 'asignado_recorrido' %}
+          text-bg-info
+      {% elif object.tracking.last.estado == 'en_transito' %}
+          text-bg-warning
+      {% elif object.tracking.last.estado == 'entregado' %}
+          text-bg-success
+      {% elif object.tracking.last.estado == 'rechazado' %}
+          text-bg-danger
+      {% endif %}
+  ">
+      {{ object.tracking.last.get_estado_display }}
+  </span>
+  
+
     </div>
 
   </div>
@@ -35,26 +49,19 @@
         <div class="row">
           <div class="col-12 col-md-6  ">
             <ul class="list-group">
-
               <li class="list-group-item active" aria-current="true">Datos del cliente</li>
               <li class="list-group-item"><strong>Cliente:</strong> {{envio.cliente | capfirst}}</li>
-              <li class="list-group-item"><strong>Dirección del cliente:</strong>
-                {{ envio.cliente.direccion }}
-              </li>
-              <li class="list-group-item"><strong>Localidad: </strong><em>aca va la localidad</em></li>
-              <li class="list-group-item"><strong>Email del cliente:</strong>
-                {{ envio.cliente.email }}
-              </li>
+              <li class="list-group-item"><strong>Dirección del cliente:</strong>{{ envio.cliente.direccion }}</li>
+              <li class="list-group-item"><strong>Localidad: </strong>{{envio.cliente.localidad}} </li>
+              <li class="list-group-item"><strong>Email del cliente:</strong>{{ envio.cliente.email }}</li>
             </ul>
           </div>
           <div class="col-12 col-md-6  ">
             <ul class="list-group">
-
               <li class="list-group-item active" aria-current="true">Datos del destinatario</li>
               <li class="list-group-item"><strong>Nombre:</strong> {{envio.destinatario_nombre}}</li>
               <li class="list-group-item"><strong>Direccion:</strong> {{envio.destinatario_direccion}}</li>
-              <li class="list-group-item"><strong>Localidad: </strong><em>aca va la localidad</em></li>
-
+              <li class="list-group-item"><strong>Localidad: </strong>{{envio.destinatario_localidad}}</li>
               <li class="list-group-item"><strong>Teléfono:</strong> {{envio.destinatario_telefono}}</li>
               <li class="list-group-item"><strong>Email:</strong> {{envio.destinatario_email}}</li>
             </ul>
@@ -101,7 +108,7 @@
           </tr>
           {% for tracking in envio.tracking.all %}
           <tr>
-            <td>{{ tracking.estado }}</td>
+            <td>{{ object.tracking.last.get_estado_display }}</td>
             <td>{{ tracking.fecha_actualizacion|date:"d/m/Y H:i" }}</td>
           </tr>
           {% empty %}

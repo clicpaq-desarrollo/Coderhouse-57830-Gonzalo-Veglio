@@ -20,8 +20,7 @@ from camiones import urls
 from choferes import urls
 from clientes import urls
 from core import views
-from envios import urls
-from hdr import urls
+from envios import urls 
 from miscelaneas import urls
 from productos import urls
 from tracking import urls
@@ -33,8 +32,7 @@ urlpatterns = [
     path('camiones/', include('camiones.urls')),
     path('choferes/', include('choferes.urls')),
     path('clientes/', include('clientes.urls')),
-    path('envios/', include('envios.urls')),
-    path('hdr/', include('hdr.urls')),
+    path('envios/', include('envios.urls')), 
     path('miscelaneas/', include('miscelaneas.urls')),
     path('productos/', include('productos.urls')),
     path('tracking/', include('tracking.urls')),

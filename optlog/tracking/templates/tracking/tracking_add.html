@@ -1,0 +1,15 @@
+{% extends 'core/base_admin.html' %}
+
+{% block main %}
+<div class="container mt-4">
+  <h1 class="title">Actualizar estado</h1>
+   
+</div>
+<a href="{% url 'tracking:tracking_create' %} ">
+  <div class="to-top">
+    <i class="bi-plus"></i>
+  </div>
+</a>
+
+{% include 'core/componentes/modal_confirm_delete.html' %}
+{% endblock main %}

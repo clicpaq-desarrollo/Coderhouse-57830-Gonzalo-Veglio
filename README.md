@@ -74,9 +74,8 @@ productos: Gestión de productos.
 pedidos: Gestión de pedidos.
 camiones: Gestión de camiones.
 choferes: Gestión de choferes.
-envios: Gestión de envíos.
-hdr: Gestión de hojas de ruta (rutas).
-miscelaneas: Gestión de datos misceláneos, como localidades (ahora eliminado).
+envios: Gestión de envíos. 
+miscelaneas: Gestión de datos misceláneos, como localidades  
 usuarios: Gestión de usuarios con el modelo integrado de Django.
 tracking: Seguimiento de envíos.
 Qué Falta Hacer

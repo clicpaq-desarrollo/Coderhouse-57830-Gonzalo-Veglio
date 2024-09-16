@@ -20,19 +20,17 @@
             <a class="nav-link" href="{% url 'envios:envio_create' %}">Nuevo envío</a>
           </nav>
         </div>
-
-        <!-- Hoja de ruta -->
-        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseHdr" aria-expanded="false" aria-controls="collapseHdr">
-          <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-          Hoja de ruta
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTracking" aria-expanded="false" aria-controls="collapseTracking">
+          <div class="sb-nav-link-icon"><i class="fa-solid fa-map-location"></i></div>
+          trazabilidad
           <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
         </a>
-        <div class="collapse" id="collapseHdr" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-          <nav class="sb-sidenav-menu-nested nav">
-            <a class="nav-link" href="{% url 'hdr:hdrs_list' %}">Ver</a>
-            <a class="nav-link" href="{% url 'hdr:hdr_create' %}">Crear</a>
+        <div class="collapse" id="collapseTracking" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+          <nav class="sb-sidenav-menu-nested nav"> 
+            <a class="nav-link" href="{% url 'tracking:tracking_create' %}">Actualizar trazabilidad</a>
           </nav>
         </div>
+ 
 
         <!-- Clientes -->
         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseClientes" aria-expanded="false" aria-controls="collapseClientes">

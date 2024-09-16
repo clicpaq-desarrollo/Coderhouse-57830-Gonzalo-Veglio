@@ -10,6 +10,7 @@
         <th>Razon Social</th>
         <th>Telefono</th>
         <th>Direccion</th>
+        <th>Localidad</th>
         <th>Accion</th>
       </tr>
     </thead>
@@ -20,6 +21,7 @@
         <td>{{object.nombre | capfirst}}</td>
         <td>{{object.telefono}}</td>
         <td>{{object.direccion}}</td>
+        <td>{{object.localidad}}</td>
         <td>
           <div class="btn-group" role="group" aria-label="Basic example">
             <a href="{% url 'clientes:cliente_edit' object.id %}" type="button" class="btn btn-primary"><i class="bi-pencil-fill"></i></a>

@@ -3,17 +3,47 @@ from django.contrib.auth.models import User
 from clientes.models import Cliente
 from productos.models import Producto
 
+class ProductoEnvio(models.Model):
+    envio = models.ForeignKey('Envio', on_delete=models.CASCADE, related_name='productoenvios')
+    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
+    cantidad = models.PositiveIntegerField(default=1)
+
 class Envio(models.Model):
     guia = models.PositiveIntegerField(unique=True, editable=False)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='envios')
-    productos = models.ManyToManyField(Producto)
+    productos = models.ManyToManyField(Producto, through='ProductoEnvio')
     destinatario_nombre = models.CharField(max_length=255)
     destinatario_direccion = models.CharField(max_length=255)
     destinatario_telefono = models.CharField(max_length=20)
     destinatario_email = models.EmailField()
+    destinatario_localidad = models.ForeignKey('miscelaneas.Localidad', on_delete=models.SET_NULL, null=True)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     anula = models.BooleanField(default=False)
     usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, editable=False)
+
+    @property
+    def peso_total(self):
+        return sum(
+            producto.peso * productoenvio.cantidad
+            for productoenvio in self.productoenvios.all()
+            for producto in [productoenvio.producto]
+        )
+
+    @property
+    def volumen_total(self):
+        return sum(
+            producto.volumen * productoenvio.cantidad
+            for productoenvio in self.productoenvios.all()
+            for producto in [productoenvio.producto]
+        )
+    
+    @property
+    def cantidad_bultos(self):
+        return sum(
+            producto.bultos * productoenvio.cantidad
+            for productoenvio in self.productoenvios.all()
+            for producto in [productoenvio.producto]
+        )
 
     def save(self, *args, **kwargs):
         if self.guia is None:
@@ -26,7 +56,7 @@ class Envio(models.Model):
         super(Envio, self).save(*args, **kwargs)
 
         # Crear el registro en Tracking después de guardar el Envio
-        from tracking.models import Tracking  # Importar localmente para evitar circular imports
+        from tracking.models import Tracking
         if not Tracking.objects.filter(envio=self).exists():
             Tracking.objects.create(
                 envio=self,
