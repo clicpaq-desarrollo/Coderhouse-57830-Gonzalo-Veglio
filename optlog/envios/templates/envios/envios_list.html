@@ -2,29 +2,28 @@
 
 {% block main %}
 <div class="container mt-4">
-  <h1 class="title">Listado de Choferes</h1>
+  <h1 class="title">Listado de envios</h1>
         <table class="table table-hover">
             <thead class="table-light">
                 <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>  
-                    <th>Apellido</th>  
-                    <th>Telefono</th>
+                    <th>Guia</th>
+                    <th>Cliente</th>  
+                    <th>Destinatario</th>   
                     <th>Accion</th> 
                 </tr>
             </thead>
             <tbody>
                 {% for object in object_list %}
                 <tr>
-                    <td>{{object.id}}</td>
-                    <td>{{object.nombre | capfirst}}</td> 
-                    <td>{{object.apellido}}</td> 
-                    <td>{{object.telefono}}</td>
+                    <td>{{object.guia}}</td>
+                    <td>{{object.cliente | capfirst}}</td> 
+                    <td>{{object.destinatario_nombre}}</td>  
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                          <a href="{% url 'choferes:chofer_edit' object.id %}" type="button" class="btn btn-primary"><i class="bi-pencil-fill"></i></a>
+                          <a href="{% url 'envios:envio_edit' object.id %}" type="button" class="btn btn-primary"><i class="bi-pencil-fill"></i></a>
+                          <a href="{% url 'envios:envio_detail' object.id %}" type="button" class="btn btn-primary"><i class="bi-eye"></i></a>
                            
-                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-delete-url="{% url 'choferes:chofer_delete' object.id %}" data-delete-name="{{ object.nombre }}, {{ object.apellido }}">
+                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-delete-url="{% url 'envios:envio_delete' object.id %}" data-delete-name="{{ object.nombre }}, {{ object.apellido }}">
                             <i class="bi-trash-fill"></i>
                           </button>
                         </div>
@@ -36,7 +35,7 @@
             </tbody>
         </table>
     </div>
-    <a href="{% url 'choferes:chofer_create' %} ">
+    <a href="{% url 'envios:envio_create' %} ">
       <div class="to-top">
         <i class="bi-plus"></i>
       </div>

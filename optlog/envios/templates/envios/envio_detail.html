@@ -1,0 +1,123 @@
+{% extends 'core/base_admin.html' %}
+
+{% block main %}
+<div class="container mt-5">
+  <h2>Estado del envio</h2>
+
+  <div class="d-flex align-items-center justify-content-between px-5">
+    <div>
+      <strong>Numero de guia: </strong>{{envio.guia}}</li>
+    </div>
+
+    <div>
+      <span class="badge text-bg-success">
+        {{ envio.tracking.last.estado }}</span>
+    </div>
+
+  </div>
+
+  <div class="shadow-sm p-3 m-4 mb-5 bg-white rounded">
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Detalles del envio</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Detalle de mercaderia</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Trazabilidad</button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active p-1" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <div class="row">
+          <div class="col-12 col-md-6  ">
+            <ul class="list-group">
+
+              <li class="list-group-item active" aria-current="true">Datos del cliente</li>
+              <li class="list-group-item"><strong>Cliente:</strong> {{envio.cliente | capfirst}}</li>
+              <li class="list-group-item"><strong>Dirección del cliente:</strong>
+                {{ envio.cliente.direccion }}
+              </li>
+              <li class="list-group-item"><strong>Localidad: </strong><em>aca va la localidad</em></li>
+              <li class="list-group-item"><strong>Email del cliente:</strong>
+                {{ envio.cliente.email }}
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6  ">
+            <ul class="list-group">
+
+              <li class="list-group-item active" aria-current="true">Datos del destinatario</li>
+              <li class="list-group-item"><strong>Nombre:</strong> {{envio.destinatario_nombre}}</li>
+              <li class="list-group-item"><strong>Direccion:</strong> {{envio.destinatario_direccion}}</li>
+              <li class="list-group-item"><strong>Localidad: </strong><em>aca va la localidad</em></li>
+
+              <li class="list-group-item"><strong>Teléfono:</strong> {{envio.destinatario_telefono}}</li>
+              <li class="list-group-item"><strong>Email:</strong> {{envio.destinatario_email}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+         <table class="table table-striped table-hover">
+          <tr>
+            <th>Nombre</th>
+            <th>Peso</th>
+            <th>Volumen</th>
+          </tr>
+        
+          {% for producto in envio.productos.all %}
+          <tr>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.peso }}</td>
+            <td>{{ producto.volumen }}</td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="3">No hay productos en este envío.</td>
+          </tr>
+          {% endfor %}
+          
+          <tr>
+            <td><strong>Totales</strong></td>
+            <td><strong>{{ total_peso }}</strong></td>
+            <td><strong>{{ total_volumen }}</strong></td>
+          </tr>
+        </table>
+        
+
+      </div>
+
+      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+ 
+        <table class="table table-striped table-hover" >
+          <tr>
+            <th>Estado</th>
+            <th>Fecha de actualización</th>
+          </tr>
+          {% for tracking in envio.tracking.all %}
+          <tr>
+            <td>{{ tracking.estado }}</td>
+            <td>{{ tracking.fecha_actualizacion|date:"d/m/Y H:i" }}</td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="2">No hay registros de trazabilidad disponibles.</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock main %}

@@ -46,8 +46,7 @@ INSTALLED_APPS = [
     'hdr',
     'media',
     'miscelaneas',
-    'optlog',
-    'pedidos',
+    'optlog', 
     'productos',
     'tracking',
     'usuarios',
@@ -119,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-ES'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Buenos_Aires'
 
 USE_I18N = True
 

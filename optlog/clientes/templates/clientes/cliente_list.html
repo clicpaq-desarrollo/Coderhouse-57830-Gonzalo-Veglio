@@ -23,7 +23,7 @@
         <td>
           <div class="btn-group" role="group" aria-label="Basic example">
             <a href="{% url 'clientes:cliente_edit' object.id %}" type="button" class="btn btn-primary"><i class="bi-pencil-fill"></i></a>
-            <!-- Botón para abrir el modal de confirmación de eliminación -->
+             
             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-delete-url="{% url 'clientes:cliente_delete' object.id %}" data-delete-name="{{ object.nombre }}">
               <i class="bi-trash-fill"></i>
             </button>
