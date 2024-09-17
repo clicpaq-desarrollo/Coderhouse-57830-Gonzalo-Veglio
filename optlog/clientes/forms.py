@@ -3,7 +3,7 @@ from .models import Cliente
 from miscelaneas.models import Localidad
 
 class ClienteForm(forms.ModelForm):
-    # Aquí configuramos el campo localidad como un ModelChoiceField
+     
     localidad = forms.ModelChoiceField(queryset=Localidad.objects.all(), widget=forms.Select(attrs={'class': 'form-control'}))
 
     class Meta:

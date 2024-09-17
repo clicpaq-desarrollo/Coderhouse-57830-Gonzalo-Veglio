@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from django.urls import reverse_lazy
-
+ 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -133,10 +133,25 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+  
+import os
+
+# Configuración de autenticación
+# URL de la página de inicio de sesión
+LOGIN_URL = reverse_lazy('core:login')
+# URL a la que se redirige después de un inicio de sesión exitoso
+LOGIN_REDIRECT_URL = reverse_lazy('core:admin_panel')
 
 # MEDIA_ROOT sirve para indicar la ruta donde se almacenarán los archivos multimedia
 MEDIA_ROOT = BASE_DIR / 'media'
 # MEDIA_URL indica la URL pública desde donde se podrán acceder a los archivos multimedia
 MEDIA_URL = '/media/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = BASE_DIR / 'static'
+try:
+    # Imprta la configuración de desarrollo cuando el archivo esté
+    from .settings_dev import *
+except ModuleNotFoundError:
+    pass
+

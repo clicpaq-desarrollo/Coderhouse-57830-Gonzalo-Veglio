@@ -1,3 +1,5 @@
+
+{% load static %}
 <div id="layoutSidenav_nav">
   <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
     <div class="sb-sidenav-menu">
@@ -98,8 +100,17 @@
       </div>
     </div>
     <div class="sb-sidenav-footer">
-      <div class="small">Logged in as:</div>
-      Start Bootstrap
+      <div class=" ">Hola! 
+      {% if user.is_authenticated %}
+         <strong> {{ user.username | title }}</strong> <br>
+         <img src="{% if request.user.userprofile.image and request.user.userprofile.image.url != '/media/default.jpg' %}{{ request.user.userprofile.image.url }}{% else %}{% static 'core/img/avatar.jpeg' %}{% endif %}" 
+         alt="Imagen de perfil" 
+         class="img-thumbnail rounded-circle" 
+         width="100">
+    
+      {% else %}
+          Invitado
+      {% endif %}
     </div>
   </nav>
 </div>

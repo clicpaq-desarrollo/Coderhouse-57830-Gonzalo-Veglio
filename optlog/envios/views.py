@@ -17,14 +17,14 @@ class EnvioDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         productos = self.object.productos.all()
 
-        # Calculando el total de bultos (cantidad de productos)
+        
         total_bultos = productos.count()
 
-        # Calculando la suma del peso y volumen de todos los productos
+        
         total_peso = sum(producto.peso for producto in productos)
         total_volumen = sum(producto.volumen for producto in productos)
 
-        # Añadiendo estos valores al contexto
+        
         context['productos'] = productos
         context['total_bultos'] = total_bultos
         context['total_peso'] = total_peso

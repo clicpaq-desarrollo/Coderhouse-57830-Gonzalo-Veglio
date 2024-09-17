@@ -55,7 +55,7 @@ class Envio(models.Model):
 
         super(Envio, self).save(*args, **kwargs)
 
-        # Crear el registro en Tracking después de guardar el Envio
+         
         from tracking.models import Tracking
         if not Tracking.objects.filter(envio=self).exists():
             Tracking.objects.create(

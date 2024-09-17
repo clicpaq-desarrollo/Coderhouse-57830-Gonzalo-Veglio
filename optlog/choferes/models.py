@@ -1,9 +1,9 @@
 from django.db import models
 
 class Chofer(models.Model):
-    nombre = models.CharField(max_length=255)  # Nombre del chofer
-    apellido = models.CharField(max_length=255)  # Apellidos del chofer 
-    telefono = models.CharField(max_length=20)  # Teléfono del chofer
+    nombre = models.CharField(max_length=255) 
+    apellido = models.CharField(max_length=255) 
+    telefono = models.CharField(max_length=20) 
     
 
     def __str__(self):
