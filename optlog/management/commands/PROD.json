@@ -1,0 +1,132 @@
+[
+  {
+    "model": "productos.producto",
+    "pk": 1,
+    "fields": {
+      "cliente": 1,
+      "nombre": "Colchón King Size",
+      "descripcion": "Colchón King Size de alta densidad, perfecto para un descanso profundo.",
+      "peso": "20.00",
+      "volumen": "8.00",
+      "bultos": 1,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 2,
+    "fields": {
+      "cliente": 2,
+      "nombre": "Rodamiento SKF 6205",
+      "descripcion": "Rodamiento de bolas SKF 6205, ideal para motores y maquinaria industrial.",
+      "peso": "0.50",
+      "volumen": "0.10",
+      "bultos": 50,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 3,
+    "fields": {
+      "cliente": 3,
+      "nombre": "Tubo de PVC 3 pulgadas",
+      "descripcion": "Tubo de PVC de 3 pulgadas de diámetro, ideal para sistemas de plomería y desagüe.",
+      "peso": "10.00",
+      "volumen": "12.00",
+      "bultos": 10,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 4,
+    "fields": {
+      "cliente": 1,
+      "nombre": "Base Sommier Queen Size",
+      "descripcion": "Base para sommier Queen Size con estructura reforzada de madera y metal.",
+      "peso": "25.00",
+      "volumen": "15.00",
+      "bultos": 1,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 5,
+    "fields": {
+      "cliente": 2,
+      "nombre": "Sellos mecánicos SKF",
+      "descripcion": "Sellos mecánicos SKF para bombas industriales, garantizan máxima eficiencia.",
+      "peso": "1.50",
+      "volumen": "0.20",
+      "bultos": 20,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 6,
+    "fields": {
+      "cliente": 1,
+      "nombre": "Almohada viscoelástica",
+      "descripcion": "Almohada ergonómica viscoelástica, ideal para soporte cervical y confort.",
+      "peso": "0.75",
+      "volumen": "2.00",
+      "bultos": 10,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 7,
+    "fields": {
+      "cliente": 2,
+      "nombre": "Buje SKF",
+      "descripcion": "Buje SKF de alta resistencia para aplicaciones industriales y automotrices.",
+      "peso": "2.00",
+      "volumen": "0.50",
+      "bultos": 30,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 8,
+    "fields": {
+      "cliente": 3,
+      "nombre": "Codo de PVC 90 grados",
+      "descripcion": "Codo de PVC de 90 grados para redirección en sistemas de plomería.",
+      "peso": "1.00",
+      "volumen": "1.50",
+      "bultos": 15,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 9,
+    "fields": {
+      "cliente": 2,
+      "nombre": "Engranaje SKF",
+      "descripcion": "Engranaje de precisión SKF para maquinaria pesada, alta durabilidad.",
+      "peso": "5.00",
+      "volumen": "3.00",
+      "bultos": 5,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 10,
+    "fields": {
+      "cliente": 1,
+      "nombre": "Protector de colchón",
+      "descripcion": "Protector de colchón impermeable, asegura durabilidad y confort.",
+      "peso": "0.80",
+      "volumen": "1.20",
+      "bultos": 20,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  }
+]

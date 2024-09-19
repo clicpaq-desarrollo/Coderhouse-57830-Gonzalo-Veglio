@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'productos',
     'tracking',
     'usuarios',
+    'graficos',
 ]
 
 MIDDLEWARE = [
@@ -143,7 +144,7 @@ LOGIN_URL = reverse_lazy('core:login')
 LOGIN_REDIRECT_URL = reverse_lazy('core:admin_panel')
 
 # MEDIA_ROOT sirve para indicar la ruta donde se almacenarán los archivos multimedia
-MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_ROOT = BASE_DIR / 'media'
 # MEDIA_URL indica la URL pública desde donde se podrán acceder a los archivos multimedia
 MEDIA_URL = '/media/'
 

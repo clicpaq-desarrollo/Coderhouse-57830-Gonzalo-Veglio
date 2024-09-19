@@ -1,0 +1,49 @@
+ [
+  {
+    "model": "choferes.chofer",
+    "pk": 1,
+    "fields": {
+      "nombre": "Paul",
+      "apellido": "Snyder",
+      "telefono": "619-8398"
+    }
+  }, 
+  {
+    "model": "choferes.chofer",
+    "pk": 2,
+    "fields": {
+      "nombre": "Erich",
+      "apellido": "Perez",
+      "telefono": "563-8822"
+    }
+  }, 
+  {
+    "model": "choferes.chofer",
+    "pk": 3,
+    "fields": {
+      "nombre": "Elijah",
+      "apellido": "Maynard",
+      "telefono": "405-9917"
+    }
+  }, 
+  {
+    "model": "choferes.chofer",
+    "pk": 4,
+    "fields": {
+      "nombre": "Lawrence",
+      "apellido": "Burns",
+      "telefono": "113-1756"
+    }
+  }, 
+  {
+    "model": "choferes.chofer",
+    "pk": 5,
+    "fields": {
+      "nombre": "Coby",
+      "apellido": "Church",
+      "telefono": "218-8125"
+    }
+  }
+]
+
+ 

@@ -9,4 +9,6 @@ urlpatterns = [
     path('admin-panel/envios/<int:pk>/edit/', EnvioUpdateView.as_view(), name='envio_edit'),
     path('admin-panel/envios/<int:pk>/delete/', EnvioDeleteView.as_view(), name='envio_delete'), 
     path('admin-panel/envios/<int:pk>/', EnvioDetailView.as_view(), name='envio_detail'),
+    path('<int:pk>/', EnvioDetailView.as_view(), name='detalle_envio'),
+    
 ]

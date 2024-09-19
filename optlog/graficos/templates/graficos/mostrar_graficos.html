@@ -1,0 +1,128 @@
+{% extends 'core/base_admin.html' %}
+
+{% block main %}
+<div class="container mt-5">
+    <h2>Gráficos de envíos</h2> 
+
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+
+            <div class="card">
+                <div class="card-header">
+                  Envios por cliente
+                </div>
+                <div class="card-body">
+                    <canvas id="graficoEnvios"></canvas> 
+                </div>
+              </div>
+
+        </div>
+        <div class="col-sm-6">
+
+            <div class="card">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                    <canvas id="graficoKilos"></canvas>
+
+                </div>
+              </div>
+
+        </div>
+      </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+// Gráfico de envíos por cliente
+fetch("{% url 'graficos:datos_envios_por_cliente' %}")
+    .then(response => response.json())
+    .then(data => {
+        const ctxEnvios = document.getElementById('graficoEnvios').getContext('2d');
+        new Chart(ctxEnvios, {
+            type: 'pie',
+            data: {
+                labels: data.labels,
+                datasets: [{
+                    label: 'Cantidad de envíos por cliente',
+                    data: data.values,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    })
+    .catch(error => console.error('Error:', error));
+
+// Gráfico de kilos por cliente
+fetch("{% url 'graficos:datos_kilos_por_cliente' %}")
+        .then(response => response.json())
+        .then(data => {
+            const ctx = document.getElementById('graficoKilos').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: 'Cantidad de kilos por cliente',
+                        data: data.values,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(tooltipItem) {
+                                    return tooltipItem.dataset.label + ': ' + tooltipItem.raw + ' kg';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true
+                        },
+                        y: {
+                            beginAtZero: true // Asegúrate de que este ajuste esté activado
+                        }
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Error:', error));
+</script>
+
+
+{% endblock %}

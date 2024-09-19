@@ -1,23 +1,43 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView 
+ 
+from django.http import JsonResponse
+from envios.models import Envio
 
 from .forms import CustomUserCreationForm, UserProfileForm
 
+ 
+from django.shortcuts import render, redirect
+from envios.models import Envio
+
+def buscar_envio(request):
+    guia = request.GET.get('guia')  # Obtén el valor del parámetro 'guia' de la URL
+    if guia:
+        try:
+            envio = Envio.objects.get(guia=guia)
+            # Si se encuentra el envío, redirige a la página de detalle
+            return redirect('envios:detalle_envio', pk=envio.pk)
+        except Envio.DoesNotExist:
+            # Si no se encuentra, retorna el index con el modal de error
+            return render(request, 'core/index.html', {
+                'error': 'El envío con esa guía no existe.'
+            })
+    # Si no se ha enviado nada, muestra el formulario de búsqueda normal
+    return render(request, 'core/index.html')
+
 
 def index(request):
-    return render(request, 'core/index.html')
- 
+     return render(request, 'core/index.html')
+
+
 
 def admin_panel(request):
     return render(request, 'core/admin_panel.html')
 
-
-def index(request):
-    return render(request, 'core/index.html')
-
+ 
 
 class Register(CreateView):
     form_class = CustomUserCreationForm
@@ -34,3 +54,4 @@ class Profile(LoginRequiredMixin, UpdateView):
     def get_object(self):
          
         return self.request.user
+ 

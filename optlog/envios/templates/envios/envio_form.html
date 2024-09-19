@@ -1,19 +1,18 @@
 {% extends 'core/base_admin.html' %}
 
 {% block main %}
-      <div class="container mt-4">
+<div class="container mt-4">
 
-        <h2>{% if object %}Editar envio{% else %}Crear envio{% endif %}</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Guardar</button>
-            <a href="{% url 'envios:envios_list' %}" class="btn btn-secondary">Cancelar</a>
-                  
-          </form> 
-        </div>
-        
-        
-            
-        {% endblock main %}
-        
+  <h2>{% if object %}Editar envio{% else %}Crear envio{% endif %}</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a href="{% url 'envios:envios_list' %}" class="btn btn-secondary">Cancelar</a>
+
+  </form>
+</div>
+
+
+
+{% endblock main %}

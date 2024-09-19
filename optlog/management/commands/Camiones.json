@@ -1,0 +1,72 @@
+[
+  {
+    "model": "camiones.camion",
+    "pk": 1,
+    "fields": {
+      "patente": "ABC123",
+      "capacidad_maxima": 873,
+      "marca": "Volvo",
+      "modelo": "FH16"
+    }
+  },
+  {
+    "model": "camiones.camion",
+    "pk": 2,
+    "fields": {
+      "patente": "DEF456",
+      "capacidad_maxima": 763,
+      "marca": "Scania",
+      "modelo": "R450"
+    }
+  },
+  {
+    "model": "camiones.camion",
+    "pk": 3,
+    "fields": {
+      "patente": "GHI789",
+      "capacidad_maxima": 934,
+      "marca": "Mercedes-Benz",
+      "modelo": "Actros"
+    }
+  },
+  {
+    "model": "camiones.camion",
+    "pk": 4,
+    "fields": {
+      "patente": "JKL012",
+      "capacidad_maxima": 652,
+      "marca": "MAN",
+      "modelo": "TGX"
+    }
+  },
+  {
+    "model": "camiones.camion",
+    "pk": 5,
+    "fields": {
+      "patente": "MNO345",
+      "capacidad_maxima": 980,
+      "marca": "Iveco",
+      "modelo": "Stralis"
+    }
+  },
+  {
+    "model": "camiones.camion",
+    "pk": 6,
+    "fields": {
+      "patente": "PQR678",
+      "capacidad_maxima": 541,
+      "marca": "DAF",
+      "modelo": "XF"
+    }
+  },
+  {
+    "model": "camiones.camion",
+    "pk": 7,
+    "fields": {
+      "patente": "STU901",
+      "capacidad_maxima": 890,
+      "marca": "Kenworth",
+      "modelo": "T680"
+    }
+  }
+]

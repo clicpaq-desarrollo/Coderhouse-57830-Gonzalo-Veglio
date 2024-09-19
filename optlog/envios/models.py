@@ -15,7 +15,7 @@ class Envio(models.Model):
     destinatario_nombre = models.CharField(max_length=255)
     destinatario_direccion = models.CharField(max_length=255)
     destinatario_telefono = models.CharField(max_length=20)
-    destinatario_email = models.EmailField()
+    destinatario_email = models.EmailField(null=True, blank=True)
     destinatario_localidad = models.ForeignKey('miscelaneas.Localidad', on_delete=models.SET_NULL, null=True)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     anula = models.BooleanField(default=False)

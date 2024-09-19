@@ -11,12 +11,11 @@ def edit_profile(request):
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
         if form.is_valid():
-            # Guarda el perfil y también actualiza los campos del usuario si es necesario
             profile = form.save()
             request.user.first_name = profile.first_name
             request.user.last_name = profile.last_name
             request.user.save()
-            return redirect('core:index')
+            return redirect('core:admin_panel')
         else:
             print("Form errors:", form.errors)
     else:

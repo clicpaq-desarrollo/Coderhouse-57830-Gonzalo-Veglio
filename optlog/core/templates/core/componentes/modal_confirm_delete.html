@@ -7,8 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <!-- Aquí se mostrará el nombre del cliente a eliminar -->
-        <p id="deleteModalText"></p>
+         <p id="deleteModalText"></p>
       </div>
       <div class="modal-footer">
         <form id="deleteForm" method="post">
@@ -21,8 +20,7 @@
   </div>
 </div>
 
-<!-- JavaScript para hacer el modal dinámico -->
-<script>
+ <script>
   const deleteModal = document.getElementById('deleteModal');
   deleteModal.addEventListener('show.bs.modal', function (event) {
     const button = event.relatedTarget;  // El botón que abrió el modal
