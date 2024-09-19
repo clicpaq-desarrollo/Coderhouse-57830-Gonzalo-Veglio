@@ -141,7 +141,7 @@ import os
 # URL de la página de inicio de sesión
 LOGIN_URL = reverse_lazy('core:login')
 # URL a la que se redirige después de un inicio de sesión exitoso
-LOGIN_REDIRECT_URL = reverse_lazy('core:admin_panel')
+LOGIN_REDIRECT_URL = reverse_lazy('graficos:mostrar_graficos')
 
 # MEDIA_ROOT sirve para indicar la ruta donde se almacenarán los archivos multimedia
 # MEDIA_ROOT = BASE_DIR / 'media'

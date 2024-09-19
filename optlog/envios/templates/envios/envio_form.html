@@ -1,18 +1,99 @@
 {% extends 'core/base_admin.html' %}
 
 {% block main %}
-<div class="container mt-4">
+<div class="container mt-4 p-3">
+  <h2>{% if object %}Editar envío{% else %}Crear envío{% endif %}</h2>
 
-  <h2>{% if object %}Editar envio{% else %}Crear envio{% endif %}</h2>
   <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+
+    <!-- Datos del Cliente -->
+    <fieldset class="border p-3 mb-4">
+      <legend class="w-auto">Datos del Cliente</legend>
+      <div class="form-group">
+        {{ form.cliente.label_tag }}
+        {{ form.cliente }}
+      </div>
+    </fieldset>
+
+    <!-- Datos del Destinatario -->
+    <fieldset class="border p-3 mb-4">
+      <legend class="w-auto">Datos del Destinatario</legend>
+      <div class="form-group mt-2">
+        Nombre y Apellido
+        {{ form.destinatario_nombre }}
+      </div>
+      <div class="form-group mt-2">
+        Dirección
+        {{ form.destinatario_direccion }}
+      </div>
+      <div class="form-group mt-2">
+        Teléfono
+        {{ form.destinatario_telefono }}
+      </div>
+      <div class="form-group mt-2">
+        Email
+        {{ form.destinatario_email }}
+      </div>
+      <div class="form-group mt-2">
+        Localidad
+        {{ form.destinatario_localidad }}
+      </div>
+    </fieldset>
+
+    <fieldset class="border p-3 mb-4">
+      <legend class="w-auto">Productos</legend>
+      <div id="productos-list">
+        {% for producto in productos %}
+        <div class="form-row mb-2">
+          <div class="col">
+            <label>
+              <input type="checkbox" name="productos" value="{{ producto.id }}" {% if producto.id in productos_seleccionados %}checked{% endif %}>
+              {{ producto.nombre }}
+            </label>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </fieldset>
+
     <button type="submit" class="btn btn-primary">Guardar</button>
     <a href="{% url 'envios:envios_list' %}" class="btn btn-secondary">Cancelar</a>
-
   </form>
 </div>
 
+<script>
+  const clienteSelect = document.getElementById('{{ form.cliente.id_for_label }}');
+  const productosList = document.getElementById('productos-list');
 
+  clienteSelect.addEventListener('change', function() {
+    const clienteId = clienteSelect.value;
+
+    if (clienteId) {
+      fetch(`/envios/productos_cliente/${clienteId}/`)
+        .then(response => response.json())
+        .then(data => {
+          productosList.innerHTML = '';
+
+          data.forEach(producto => {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('form-row', 'mb-2');
+            productDiv.innerHTML = ` 
+                <div class="col">
+                  <label>
+                    <input type="checkbox" name="productos" value="${producto.id}">
+                    ${producto.nombre}
+                  </label>
+                </div>
+            `;
+            productosList.appendChild(productDiv);
+          });
+        });
+    } else {
+      productosList.innerHTML = '';
+    }
+  });
+</script>
 
 {% endblock main %}

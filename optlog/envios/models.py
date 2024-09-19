@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from clientes.models import Cliente
 from productos.models import Producto
+from miscelaneas.models import Localidad, Provincia
 
 class ProductoEnvio(models.Model):
     envio = models.ForeignKey('Envio', on_delete=models.CASCADE, related_name='productoenvios')
@@ -16,7 +17,8 @@ class Envio(models.Model):
     destinatario_direccion = models.CharField(max_length=255)
     destinatario_telefono = models.CharField(max_length=20)
     destinatario_email = models.EmailField(null=True, blank=True)
-    destinatario_localidad = models.ForeignKey('miscelaneas.Localidad', on_delete=models.SET_NULL, null=True)
+    destinatario_localidad = models.ForeignKey(Localidad, on_delete=models.SET_NULL, null=True)
+        
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     anula = models.BooleanField(default=False)
     usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, editable=False)
@@ -55,7 +57,6 @@ class Envio(models.Model):
 
         super(Envio, self).save(*args, **kwargs)
 
-         
         from tracking.models import Tracking
         if not Tracking.objects.filter(envio=self).exists():
             Tracking.objects.create(
@@ -63,6 +64,7 @@ class Envio(models.Model):
                 estado='en_proceso_despacho',
                 usuario=self.usuario
             )
+
 
     def __str__(self):
         return f"Guía {self.guia} - {self.destinatario_nombre}"

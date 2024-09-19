@@ -1,0 +1,642 @@
+[
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 1,
+    "fields": {
+      "localidad": "San Martín",
+      "provincia": 1
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 2,
+    "fields": {
+      "localidad": "La Plata",
+      "provincia": 1
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 3,
+    "fields": {
+      "localidad": "Mar del Plata",
+      "provincia": 1
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 4,
+    "fields": {
+      "localidad": "Bahía Blanca",
+      "provincia": 1
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 5,
+    "fields": {
+      "localidad": "San Fernando del Valle de Catamarca",
+      "provincia": 2
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 6,
+    "fields": {
+      "localidad": "Belén",
+      "provincia": 2
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 7,
+    "fields": {
+      "localidad": "Santa María",
+      "provincia": 2
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 8,
+    "fields": {
+      "localidad": "Andalgalá",
+      "provincia": 2
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 9,
+    "fields": {
+      "localidad": "Resistencia",
+      "provincia": 3
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 10,
+    "fields": {
+      "localidad": "Barranqueras",
+      "provincia": 3
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 11,
+    "fields": {
+      "localidad": "Sáenz Peña",
+      "provincia": 3
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 12,
+    "fields": {
+      "localidad": "Charata",
+      "provincia": 3
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 13,
+    "fields": {
+      "localidad": "Rawson",
+      "provincia": 4
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 14,
+    "fields": {
+      "localidad": "Trelew",
+      "provincia": 4
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 15,
+    "fields": {
+      "localidad": "Comodoro Rivadavia",
+      "provincia": 4
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 16,
+    "fields": {
+      "localidad": "Puerto Madryn",
+      "provincia": 4
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 17,
+    "fields": {
+      "localidad": "Córdoba",
+      "provincia": 5
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 18,
+    "fields": {
+      "localidad": "Villa María",
+      "provincia": 5
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 19,
+    "fields": {
+      "localidad": "Río Cuarto",
+      "provincia": 5
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 20,
+    "fields": {
+      "localidad": "Carlos Paz",
+      "provincia": 5
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 21,
+    "fields": {
+      "localidad": "Corrientes",
+      "provincia": 6
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 22,
+    "fields": {
+      "localidad": "Goya",
+      "provincia": 6
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 23,
+    "fields": {
+      "localidad": "Mercedes",
+      "provincia": 6
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 24,
+    "fields": {
+      "localidad": "Esquina",
+      "provincia": 6
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 25,
+    "fields": {
+      "localidad": "Paraná",
+      "provincia": 7
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 26,
+    "fields": {
+      "localidad": "Concordia",
+      "provincia": 7
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 27,
+    "fields": {
+      "localidad": "Colón",
+      "provincia": 7
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 28,
+    "fields": {
+      "localidad": "Gualeguaychú",
+      "provincia": 7
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 29,
+    "fields": {
+      "localidad": "Formosa",
+      "provincia": 8
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 30,
+    "fields": {
+      "localidad": "Clorinda",
+      "provincia": 8
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 31,
+    "fields": {
+      "localidad": "Pirané",
+      "provincia": 8
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 32,
+    "fields": {
+      "localidad": "El Colorado",
+      "provincia": 8
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 33,
+    "fields": {
+      "localidad": "San Salvador de Jujuy",
+      "provincia": 9
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 34,
+    "fields": {
+      "localidad": "Palpala",
+      "provincia": 9
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 35,
+    "fields": {
+      "localidad": "Perico",
+      "provincia": 9
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 36,
+    "fields": {
+      "localidad": "Humahuaca",
+      "provincia": 9
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 37,
+    "fields": {
+      "localidad": "Santa Rosa",
+      "provincia": 10
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 38,
+    "fields": {
+      "localidad": "General Pico",
+      "provincia": 10
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 39,
+    "fields": {
+      "localidad": "Toay",
+      "provincia": 10
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 40,
+    "fields": {
+      "localidad": "Realicó",
+      "provincia": 10
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 41,
+    "fields": {
+      "localidad": "La Rioja",
+      "provincia": 11
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 42,
+    "fields": {
+      "localidad": "Chilecito",
+      "provincia": 11
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 43,
+    "fields": {
+      "localidad": "Famatina",
+      "provincia": 11
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 44,
+    "fields": {
+      "localidad": "Villa Unión",
+      "provincia": 11
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 45,
+    "fields": {
+      "localidad": "Mendoza",
+      "provincia": 12
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 46,
+    "fields": {
+      "localidad": "San Rafael",
+      "provincia": 12
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 47,
+    "fields": {
+      "localidad": "General Alvear",
+      "provincia": 12
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 48,
+    "fields": {
+      "localidad": "Tunuyán",
+      "provincia": 12
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 49,
+    "fields": {
+      "localidad": "Posadas",
+      "provincia": 13
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 50,
+    "fields": {
+      "localidad": "Eldorado",
+      "provincia": 13
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 51,
+    "fields": {
+      "localidad": "Oberá",
+      "provincia": 13
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 52,
+    "fields": {
+      "localidad": "San Vicente",
+      "provincia": 13
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 53,
+    "fields": {
+      "localidad": "Neuquén",
+      "provincia": 14
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 54,
+    "fields": {
+      "localidad": "San Martín de los Andes",
+      "provincia": 14
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 55,
+    "fields": {
+      "localidad": "Cutral-Có",
+      "provincia": 14
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 56,
+    "fields": {
+      "localidad": "Zapala",
+      "provincia": 14
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 57,
+    "fields": {
+      "localidad": "Viedma",
+      "provincia": 15
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 58,
+    "fields": {
+      "localidad": "Cipolletti",
+      "provincia": 15
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 59,
+    "fields": {
+      "localidad": "General Roca",
+      "provincia": 15
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 60,
+    "fields": {
+      "localidad": "San Carlos de Bariloche",
+      "provincia": 15
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 61,
+    "fields": {
+      "localidad": "Salta",
+      "provincia": 16
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 62,
+    "fields": {
+      "localidad": "San Salvador",
+      "provincia": 16
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 63,
+    "fields": {
+      "localidad": "Orán",
+      "provincia": 16
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 64,
+    "fields": {
+      "localidad": "Tartagal",
+      "provincia": 16
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 65,
+    "fields": {
+      "localidad": "San Juan",
+      "provincia": 17
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 66,
+    "fields": {
+      "localidad": "Rivadavia",
+      "provincia": 17
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 67,
+    "fields": {
+      "localidad": "Caucete",
+      "provincia": 17
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 68,
+    "fields": {
+      "localidad": "Rawson",
+      "provincia": 17
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 69,
+    "fields": {
+      "localidad": "San Luis",
+      "provincia": 18
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 70,
+    "fields": {
+      "localidad": "Villa Mercedes",
+      "provincia": 18
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 71,
+    "fields": {
+      "localidad": "Merlo",
+      "provincia": 18
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 72,
+    "fields": {
+      "localidad": "La Punta",
+      "provincia": 18
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 73,
+    "fields": {
+      "localidad": "Río Grande",
+      "provincia": 22
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 74,
+    "fields": {
+      "localidad": "Ushuaia",
+      "provincia": 22
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 75,
+    "fields": {
+      "localidad": "Tolhuin",
+      "provincia": 22
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 76,
+    "fields": {
+      "localidad": "Las Heras",
+      "provincia": 22
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 77,
+    "fields": {
+      "localidad": "San Miguel de Tucumán",
+      "provincia": 23
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 78,
+    "fields": {
+      "localidad": "Concepción",
+      "provincia": 23
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 79,
+    "fields": {
+      "localidad": "Tafí Viejo",
+      "provincia": 23
+    }
+  },
+  {
+    "model": "miscelaneas.localidad",
+    "pk": 80,
+    "fields": {
+      "localidad": "Yerba Buena",
+      "provincia": 23
+    }
+  }
+]

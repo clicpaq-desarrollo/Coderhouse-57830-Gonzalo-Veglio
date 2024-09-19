@@ -1,10 +1,8 @@
 from django.urls import path
-from .views import AddTrackingView
+from .views import TrazabilidadUpdateView
 
 app_name = 'tracking'
 
-urlpatterns = [ 
-    path('admin-panel/tracking/create/', AddTrackingView.as_view(), name='tracking_create'),
-
- ]
- 
+urlpatterns = [
+    path('actualizar-trazabilidad/', TrazabilidadUpdateView.as_view(), name='trazabilidad_update'),
+]

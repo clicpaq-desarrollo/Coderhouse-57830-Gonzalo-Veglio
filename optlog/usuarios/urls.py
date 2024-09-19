@@ -1,12 +1,11 @@
-
-from django.conf import settings
-from django.conf.urls.static import static
-
 from django.urls import path
-from . import views
+from .views import UserListView, UserCreateView, UserUpdateView, UserDeleteView
 
 app_name = 'usuarios'
 
 urlpatterns = [
-    path('edit-profile/', views.edit_profile, name='edit_profile'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', UserListView.as_view(), name='user_list'),
+    path('create/', UserCreateView.as_view(), name='user_create'),
+    path('<int:pk>/edit/', UserUpdateView.as_view(), name='user_edit'),
+    path('<int:pk>/delete/', UserDeleteView.as_view(), name='user_delete'),
+]

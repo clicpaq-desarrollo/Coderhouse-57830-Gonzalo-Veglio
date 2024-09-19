@@ -1,0 +1,53 @@
+{% extends 'core/base_admin.html' %}
+{% block main %}
+<div class="container mt-5">
+  <h1>Usuarios</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>
+          {{ user.username }}
+        </td>
+        <td>
+          {{ user.first_name}}
+        </td>
+        <td>
+          {{ user.last_name }}
+        </td>
+
+        <td>
+          {{ user.email }}
+        </td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <a href="{% url 'usuarios:user_edit' user.pk %}" type="button" class="btn btn-primary"><i class="bi-pencil-fill"></i></a>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-delete-url="{% url 'usuarios:user_delete' user.pk %}" data-delete-name="{{ user.username }}">
+              <i class="bi-trash-fill"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<a href="{% url 'usuarios:user_create' %} ">
+  <div class="to-top">
+    <i class="bi-plus"></i>
+  </div>
+</a>
+
+
+{% include 'core/componentes/modal_confirm_delete.html' %}
+{% endblock main %}

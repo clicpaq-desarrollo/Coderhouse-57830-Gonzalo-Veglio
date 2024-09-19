@@ -1,6 +1,7 @@
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 
+from django.views.generic import RedirectView
 from .forms import CustomLoginForm
 from . import views
 from .views import buscar_envio
@@ -8,8 +9,10 @@ from .views import buscar_envio
 app_name = 'core'
     
 urlpatterns = [
-    path('', views.index, name='index'),  # Vista principal de index
-    path('buscar/', views.buscar_envio, name='buscar_envio'),  # Ruta para buscar envíos
+    path('index/', views.index, name='index'),  
+     path('', RedirectView.as_view(url='/graficos/mostrar/', permanent=False), name='home'),
+   
+    path('buscar/', views.buscar_envio, name='buscar_envio'),  
     path('admin-panel/', views.admin_panel, name='admin_panel'),
     path('login', LoginView.as_view(
         template_name='core/login.html', 

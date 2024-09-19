@@ -14,19 +14,20 @@ from django.shortcuts import render, redirect
 from envios.models import Envio
 
 def buscar_envio(request):
-    guia = request.GET.get('guia')  # Obtén el valor del parámetro 'guia' de la URL
+    guia = request.GET.get('guia')  
     if guia:
         try:
             envio = Envio.objects.get(guia=guia)
-            # Si se encuentra el envío, redirige a la página de detalle
+        
             return redirect('envios:detalle_envio', pk=envio.pk)
         except Envio.DoesNotExist:
-            # Si no se encuentra, retorna el index con el modal de error
+        
             return render(request, 'core/index.html', {
                 'error': 'El envío con esa guía no existe.'
             })
-    # Si no se ha enviado nada, muestra el formulario de búsqueda normal
+
     return render(request, 'core/index.html')
+
 
 
 def index(request):

@@ -1,7 +1,7 @@
 {% extends 'core/base_admin.html' %}
  
 {% block main %} 
-      <div class="container mt-5"></div>
+      <div class="container mt-5"> 
         <h2>{% if object %}Editar Camion{% else %}Crear Camión{% endif %}</h2>
         <form method="post">
             {% csrf_token %}

@@ -1,0 +1,17 @@
+{% extends 'core/base_admin.html' %}
+
+{% block main %}
+
+<div class="container mt-4">
+    <h2>{% if object %}Editar usuario{% else %}Crear usuario{% endif %}</h2>
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ profile_form.as_p }} 
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a href="{% url 'usuarios:user_list' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+
+
+{% include 'core/componentes/modal_confirm_delete.html' %}
+{% endblock main %}

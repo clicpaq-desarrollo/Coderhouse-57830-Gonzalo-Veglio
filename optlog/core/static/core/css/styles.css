@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*!
+ /*!
 * Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
@@ -10,6 +10,30 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+.paralax-index{
+  background-image: url('../img/paralax-index.jpg' ); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.display-1 {
+  font-size: 10rem!important;
+  font-weight: 300;
+  line-height: 1.2;
+  font-weight: bold; 
+}
+
+
+  .text-white {
+    color: #fff !important;
+}
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

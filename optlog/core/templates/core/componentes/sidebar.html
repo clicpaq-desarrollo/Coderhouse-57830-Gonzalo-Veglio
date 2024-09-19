@@ -30,7 +30,7 @@
         </a>
         <div class="collapse" id="collapseTracking" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
           <nav class="sb-sidenav-menu-nested nav"> 
-            <a class="nav-link" href="{% url 'tracking:tracking_create' %}">Actualizar trazabilidad</a>
+            <a class="nav-link" href="{% url 'tracking:trazabilidad_update' %}">Actualizar trazabilidad</a>
           </nav>
         </div>
  
@@ -43,7 +43,7 @@
         </a>
         <div class="collapse" id="collapseClientes" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
           <nav class="sb-sidenav-menu-nested nav">
-            <a class="nav-link" href="{% url 'clientes:cliente_list' %}">Ver</a>
+            <a class="nav-link" href="{% url 'clientes:clientes_list' %}">Ver</a>
             <a class="nav-link" href="{% url 'clientes:cliente_create' %}">Crear</a>
           </nav>
         </div>
@@ -89,11 +89,19 @@
           </nav>
         </div>
 
-
-        <a class="nav-link" href="#">
-          <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
+        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUsuarios" aria-expanded="false" aria-controls="collapseUsuarios">
+          <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
           Usuarios
+          <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
         </a>
+        <div class="collapse" id="collapseUsuarios" aria-labelledby="headingFour" data-bs-parent="#sidenavAccordion">
+          <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{% url 'usuarios:user_list' %}">Ver</a>
+            <a class="nav-link" href="{% url 'usuarios:user_create' %}">Crear</a>
+          </nav>
+        </div>
+
+ 
         <a class="nav-link" href="{% url 'admin:index' %}">
           <div class="sb-nav-link-icon"><i class="fas fa-users-cog"></i></div>
           Admin Django
