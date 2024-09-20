@@ -22,6 +22,7 @@ El objetivo de **Optlog** es proporcionar una plataforma integral para la gesti�
 - **Autenticación de Usuarios**: Utiliza el modelo de usuario integrado de Django para el login y permisos.
 
 
+
 ### Funcionalidades en Progreso
 
 - **Modulo de Hoja de Ruta**: Creacion de un modulo que permita agrupar a los envios en un mismo recorrido para tener contro de la mercaderia y dar una mejora trazabilidad a cada uno de los envios.
@@ -81,4 +82,11 @@ Para instalar y ejecutar el proyecto localmente, sigue estos pasos:
 - __miscelaneas__: Gestión de datos misceláneos, como localidades   
 - __tracking__: Seguimiento de envíos.
 
- 
+
+
+ **Video de la funcionalidad de la aplicación**
+ https://drive.google.com/drive/folders/1ya4AP46xlp-yEHxIgtGAcfVpPhfQ03y8?usp=sharing
+
+ **Datos de acceso a la plataforma**
+     - __Usuario__ admin
+     - __Pass__ 1234
