@@ -1,0 +1,79 @@
+[
+  {
+    "model": "clientes.cliente",
+    "pk": 1,
+    "fields": {
+      "nombre": "Wamaro",
+      "direccion": "San Juan 2020",
+      "telefono": "1234554124",
+      "email": "info@wamaro.com.ar",
+      "localidad": 2
+    }
+  },
+  {
+    "model": "clientes.cliente",
+    "pk": 2,
+    "fields": {
+      "nombre": "SKF",
+      "direccion": "San Pedro 2020",
+      "telefono": "1234554124",
+      "email": "info@skf.com.ar",
+      "localidad": 1
+    }
+  },
+  {
+    "model": "clientes.cliente",
+    "pk": 3,
+    "fields": {
+      "nombre": "IPS",
+      "direccion": "San Mateo 2020",
+      "telefono": "1234554123454",
+      "email": "info@ips.com.ar",
+      "localidad": 1
+    }
+  },
+  {
+    "model": "clientes.cliente",
+    "pk": 4,
+    "fields": {
+      "nombre": "Tech Solutions",
+      "direccion": "Av. Libertador 3000",
+      "telefono": "1122334455",
+      "email": "contact@techsolutions.com",
+      "localidad": 3
+    }
+  },
+  {
+    "model": "clientes.cliente",
+    "pk": 5,
+    "fields": {
+      "nombre": "GreenTech",
+      "direccion": "Calle Verde 1500",
+      "telefono": "2233445566",
+      "email": "info@greentech.com",
+      "localidad": 4
+    }
+  },
+  {
+    "model": "clientes.cliente",
+    "pk": 6,
+    "fields": {
+      "nombre": "MarketPro",
+      "direccion": "Calle Market 777",
+      "telefono": "3344556677",
+      "email": "hello@marketpro.com",
+      "localidad": 1
+    }
+  },
+  {
+    "model": "clientes.cliente",
+    "pk": 7,
+    "fields": {
+      "nombre": "Creative Minds",
+      "direccion": "Av. Creativa 800",
+      "telefono": "4455667788",
+      "email": "info@creativeminds.com",
+      "localidad": 2
+    }
+  }
+]

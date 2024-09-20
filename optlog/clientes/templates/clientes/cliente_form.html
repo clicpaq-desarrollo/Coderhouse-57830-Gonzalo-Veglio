@@ -21,11 +21,12 @@
           <div class="col-md-6 mb-3">
               <label for="{{ form.direccion.id_for_label }}">Dirección</label>
               {{ form.direccion }}
-          </div>
-          <div class="col-md-6 mb-3">
-              <label for="{{ form.localidad.id_for_label }}">Localidad</label>
-              {{ form.destinatario_localidad }}
           </div> 
+          <div class="col-md-6 mb-3">
+            <label for="{{ form.localidad.id_for_label }}">Localidad</label>
+            {{ form.localidad }}  
+        </div>
+        
       </div>
       <button type="submit" class="btn btn-primary">Guardar</button>
       <a href="{% url 'clientes:clientes_list' %}" class="btn btn-secondary">Cancelar</a>

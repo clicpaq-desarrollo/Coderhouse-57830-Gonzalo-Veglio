@@ -14,7 +14,7 @@ class UserCreateView(LoginRequiredMixin, CreateView):
     model = User
     form_class = UserChangeCustomForm
     template_name = 'usuarios/user_form.html'
-    success_url = reverse_lazy('usuarios:user_list')
+    success_url = reverse_lazy('graficos:mostrar_graficos')
 
     def form_valid(self, form):
         response = super().form_valid(form)
@@ -26,7 +26,7 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
     model = User
     form_class = UserChangeCustomForm
     template_name = 'usuarios/user_form.html'
-    success_url = reverse_lazy('usuarios:user_list')
+    success_url = reverse_lazy('graficos:mostrar_graficos')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -54,4 +54,4 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
 
 class UserDeleteView(LoginRequiredMixin, DeleteView):
     model = User
-    success_url = reverse_lazy('usuarios:user_list')
+    success_url = reverse_lazy('graficos:mostrar_graficos')

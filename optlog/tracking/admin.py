@@ -5,7 +5,7 @@ from . import models
  
 @admin.register(models.Tracking)
 class TrackingAdmin(admin.ModelAdmin):
-    list_display = ('envio', 'estado', 'ubicacion', 'fecha_actualizacion',) 
+    list_display = ('envio', 'estado', 'detalle', 'fecha_actualizacion',) 
  
 
 

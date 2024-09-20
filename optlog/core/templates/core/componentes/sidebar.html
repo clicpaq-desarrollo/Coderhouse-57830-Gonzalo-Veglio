@@ -89,7 +89,7 @@
           </nav>
         </div>
 
-        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUsuarios" aria-expanded="false" aria-controls="collapseUsuarios">
+        <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseUsuarios" aria-expanded="false" aria-controls="collapseUsuarios">
           <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
           Usuarios
           <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -99,7 +99,7 @@
             <a class="nav-link" href="{% url 'usuarios:user_list' %}">Ver</a>
             <a class="nav-link" href="{% url 'usuarios:user_create' %}">Crear</a>
           </nav>
-        </div>
+        </div> -->
 
  
         <a class="nav-link" href="{% url 'admin:index' %}">
@@ -112,10 +112,11 @@
       <div class=" ">Hola! 
       {% if user.is_authenticated %}
          <strong> {{ user.username | title }}</strong> <br>
-         <img src="{% if request.user.userprofile.image and request.user.userprofile.image.url != '/media/default.jpg' %}{{ request.user.userprofile.image.url }}{% else %}{% static 'core/img/avatar.jpeg' %}{% endif %}" 
-         alt="Imagen de perfil" 
-         class="img-thumbnail rounded-circle" 
-         width="100">
+         <img src="{% if request.user.userprofile.profile_image and request.user.userprofile.profile_image.url != '/media/default.jpg' %}{{ request.user.userprofile.profile_image.url }}{% else %}{% static 'core/img/avatar.jpeg' %}{% endif %}" 
+alt="Imagen de perfil" 
+class="img-thumbnail rounded-circle" 
+width="100">
+
     
       {% else %}
           Invitado

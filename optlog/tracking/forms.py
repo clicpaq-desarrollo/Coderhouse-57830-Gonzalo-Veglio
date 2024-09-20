@@ -13,9 +13,9 @@ class EnvioSearchForm(forms.Form):
 class TrackingForm(forms.ModelForm):
     class Meta:
         model = Tracking
-        fields = ['estado', 'ubicacion']  
+        fields = ['estado', 'detalle']  
         widgets = {
             'estado': forms.Select(choices=Tracking.ESTADOS_ENVIO, attrs={'class': 'form-control'}),
-            'ubicacion': forms.TextInput(attrs={'class': 'form-control','placeholder': 'Ubicación opcional'}),
+            'detalle': forms.TextInput(attrs={'class': 'form-control','placeholder': 'Detalle opcional'}),
         }
  

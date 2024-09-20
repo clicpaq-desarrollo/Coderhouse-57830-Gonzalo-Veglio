@@ -12,7 +12,7 @@ class Tracking(models.Model):
 
     envio = models.ForeignKey('envios.Envio', on_delete=models.CASCADE, related_name='tracking')
     estado = models.CharField(max_length=50, choices=ESTADOS_ENVIO, default='en_proceso_despacho')
-    ubicacion = models.CharField(max_length=255, null=True, blank=True)
+    detalle = models.CharField(max_length=255, null=True, blank=True)
     fecha_actualizacion = models.DateTimeField(auto_now_add=True)
     usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
 

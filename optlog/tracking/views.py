@@ -3,6 +3,8 @@ from django.views.generic.edit import FormView
 from .forms import EnvioSearchForm, TrackingForm
 from .models import Tracking
 from envios.models import Envio
+from django.contrib import messages
+
 
 class TrazabilidadUpdateView(FormView):
     template_name = 'tracking/tracking_add.html'
@@ -17,7 +19,12 @@ class TrazabilidadUpdateView(FormView):
         search_form = self.get_form()
         if search_form.is_valid():
             guia = search_form.cleaned_data['guia']
-            envio = get_object_or_404(Envio, guia=guia)
+            try:
+                envio = Envio.objects.get(guia=guia)
+            except Envio.DoesNotExist:
+                messages.error(request, 'La guía no existe. Por favor, verifica el número de guía.')
+                return self.render_to_response(self.get_context_data(form=search_form))
+
             tracking_form = TrackingForm(request.POST)
             if tracking_form.is_valid():
                 tracking = tracking_form.save(commit=False)
@@ -26,4 +33,5 @@ class TrazabilidadUpdateView(FormView):
                 tracking.save()
                 return redirect('envios:envios_list')  
             return self.render_to_response(self.get_context_data(envio=envio, tracking_form=tracking_form))
+
         return self.form_invalid(search_form)

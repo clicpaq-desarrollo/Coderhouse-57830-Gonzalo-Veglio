@@ -122,7 +122,8 @@ class EnvioUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['productos'] = Producto.objects.all()
+        cliente_id = self.object.cliente.id  # Obtener el ID del cliente asociado
+        context['productos'] = Producto.objects.filter(cliente_id=cliente_id)  # Filtrar productos por cliente
         context['productos_seleccionados'] = self.object.productos.values_list('id', flat=True)
         return context
 

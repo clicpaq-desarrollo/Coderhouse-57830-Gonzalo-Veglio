@@ -3,7 +3,7 @@
     "model": "productos.producto",
     "pk": 1,
     "fields": {
-      "cliente": 4,
+      "cliente": 1,
       "nombre": "Colchón King Size",
       "descripcion": "Colchón King Size de alta densidad, perfecto para un descanso profundo.",
       "peso": "20.00",
@@ -16,7 +16,7 @@
     "model": "productos.producto",
     "pk": 2,
     "fields": {
-      "cliente": 5,
+      "cliente": 2,
       "nombre": "Rodamiento SKF 6205",
       "descripcion": "Rodamiento de bolas SKF 6205, ideal para motores y maquinaria industrial.",
       "peso": "0.50",
@@ -29,7 +29,7 @@
     "model": "productos.producto",
     "pk": 3,
     "fields": {
-      "cliente": 6,
+      "cliente": 3,
       "nombre": "Tubo de PVC 3 pulgadas",
       "descripcion": "Tubo de PVC de 3 pulgadas de diámetro, ideal para sistemas de plomería y desagüe.",
       "peso": "10.00",
@@ -42,7 +42,7 @@
     "model": "productos.producto",
     "pk": 4,
     "fields": {
-      "cliente": 4,
+      "cliente": 1,
       "nombre": "Base Sommier Queen Size",
       "descripcion": "Base para sommier Queen Size con estructura reforzada de madera y metal.",
       "peso": "25.00",
@@ -55,7 +55,7 @@
     "model": "productos.producto",
     "pk": 5,
     "fields": {
-      "cliente": 5,
+      "cliente": 2,
       "nombre": "Sellos mecánicos SKF",
       "descripcion": "Sellos mecánicos SKF para bombas industriales, garantizan máxima eficiencia.",
       "peso": "1.50",
@@ -68,7 +68,7 @@
     "model": "productos.producto",
     "pk": 6,
     "fields": {
-      "cliente": 4,
+      "cliente": 1,
       "nombre": "Almohada viscoelástica",
       "descripcion": "Almohada ergonómica viscoelástica, ideal para soporte cervical y confort.",
       "peso": "0.75",
@@ -81,7 +81,7 @@
     "model": "productos.producto",
     "pk": 7,
     "fields": {
-      "cliente": 5,
+      "cliente": 2,
       "nombre": "Buje SKF",
       "descripcion": "Buje SKF de alta resistencia para aplicaciones industriales y automotrices.",
       "peso": "2.00",
@@ -94,7 +94,7 @@
     "model": "productos.producto",
     "pk": 8,
     "fields": {
-      "cliente": 6,
+      "cliente": 3,
       "nombre": "Codo de PVC 90 grados",
       "descripcion": "Codo de PVC de 90 grados para redirección en sistemas de plomería.",
       "peso": "1.00",
@@ -107,7 +107,7 @@
     "model": "productos.producto",
     "pk": 9,
     "fields": {
-      "cliente": 5,
+      "cliente": 2,
       "nombre": "Engranaje SKF",
       "descripcion": "Engranaje de precisión SKF para maquinaria pesada, alta durabilidad.",
       "peso": "5.00",
@@ -120,12 +120,324 @@
     "model": "productos.producto",
     "pk": 10,
     "fields": {
-      "cliente": 4,
+      "cliente": 1,
       "nombre": "Protector de colchón",
       "descripcion": "Protector de colchón impermeable, asegura durabilidad y confort.",
       "peso": "0.80",
       "volumen": "1.20",
       "bultos": 20,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 11,
+    "fields": {
+      "cliente": 1,
+      "nombre": "Sábana King Size",
+      "descripcion": "Juego de sábanas King Size de microfibra, suave y duradero.",
+      "peso": "1.50",
+      "volumen": "0.50",
+      "bultos": 10,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 12,
+    "fields": {
+      "cliente": 1,
+      "nombre": "Cama King Size",
+      "descripcion": "Cama King Size con estructura de madera y cabecera tapizada.",
+      "peso": "80.00",
+      "volumen": "50.00",
+      "bultos": 1,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 13,
+    "fields": {
+      "cliente": 1,
+      "nombre": "Colchón inflable",
+      "descripcion": "Colchón inflable de dos plazas, ideal para camping.",
+      "peso": "3.00",
+      "volumen": "0.70",
+      "bultos": 5,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 14,
+    "fields": {
+      "cliente": 2,
+      "nombre": "Rodamiento SKF 6305",
+      "descripcion": "Rodamiento de bolas SKF 6305, utilizado en maquinaria pesada.",
+      "peso": "0.60",
+      "volumen": "0.12",
+      "bultos": 25,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 15,
+    "fields": {
+      "cliente": 2,
+      "nombre": "Polea SKF",
+      "descripcion": "Polea SKF de alta calidad, para transmisión de potencia.",
+      "peso": "3.00",
+      "volumen": "1.00",
+      "bultos": 10,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 16,
+    "fields": {
+      "cliente": 2,
+      "nombre": "Banda SKF",
+      "descripcion": "Banda de transmisión SKF, duradera y eficiente.",
+      "peso": "1.20",
+      "volumen": "0.50",
+      "bultos": 15,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 17,
+    "fields": {
+      "cliente": 3,
+      "nombre": "Tubo de PVC 4 pulgadas",
+      "descripcion": "Tubo de PVC de 4 pulgadas de diámetro, ideal para desagües.",
+      "peso": "15.00",
+      "volumen": "20.00",
+      "bultos": 5,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 18,
+    "fields": {
+      "cliente": 3,
+      "nombre": "Tapa de PVC 4 pulgadas",
+      "descripcion": "Tapa de PVC de 4 pulgadas, utilizada para sellar tubos.",
+      "peso": "0.50",
+      "volumen": "0.05",
+      "bultos": 30,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 19,
+    "fields": {
+      "cliente": 3,
+      "nombre": "Te de PVC 4 pulgadas",
+      "descripcion": "Te de PVC de 4 pulgadas, para conexiones en sistemas de plomería.",
+      "peso": "1.20",
+      "volumen": "0.10",
+      "bultos": 20,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 20,
+    "fields": {
+      "cliente": 4,
+      "nombre": "Colchón Queen Size",
+      "descripcion": "Colchón Queen Size de alta calidad para un buen descanso.",
+      "peso": "18.00",
+      "volumen": "7.00",
+      "bultos": 1,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 21,
+    "fields": {
+      "cliente": 4,
+      "nombre": "Base Sommier King Size",
+      "descripcion": "Base para sommier King Size con estructura robusta.",
+      "peso": "30.00",
+      "volumen": "18.00",
+      "bultos": 1,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 22,
+    "fields": {
+      "cliente": 4,
+      "nombre": "Almohada ortopédica",
+      "descripcion": "Almohada ortopédica que proporciona un soporte adecuado.",
+      "peso": "1.00",
+      "volumen": "0.50",
+      "bultos": 5,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 23,
+    "fields": {
+      "cliente": 5,
+      "nombre": "Rodillo de PVC",
+      "descripcion": "Rodillo de PVC para revestimientos y construcción.",
+      "peso": "2.50",
+      "volumen": "1.00",
+      "bultos": 10,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 24,
+    "fields": {
+      "cliente": 5,
+      "nombre": "Tijeras de jardín",
+      "descripcion": "Tijeras de jardín de alta calidad para cortar plantas.",
+      "peso": "0.75",
+      "volumen": "0.20",
+      "bultos": 15,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 25,
+    "fields": {
+      "cliente": 5,
+      "nombre": "Guantes de jardinería",
+      "descripcion": "Guantes de jardinería para protección y confort.",
+      "peso": "0.50",
+      "volumen": "0.15",
+      "bultos": 20,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 26,
+    "fields": {
+      "cliente": 6,
+      "nombre": "Compresor de aire",
+      "descripcion": "Compresor de aire portátil, ideal para uso doméstico.",
+      "peso": "5.00",
+      "volumen": "1.50",
+      "bultos": 1,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 27,
+    "fields": {
+      "cliente": 6,
+      "nombre": "Manguera de aire",
+      "descripcion": "Manguera de aire de alta resistencia, longitud de 10 metros.",
+      "peso": "1.50",
+      "volumen": "0.80",
+      "bultos": 5,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 28,
+    "fields": {
+      "cliente": 6,
+      "nombre": "Kit de herramientas",
+      "descripcion": "Kit completo de herramientas para reparaciones en casa.",
+      "peso": "3.50",
+      "volumen": "2.00",
+      "bultos": 3,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 29,
+    "fields": {
+      "cliente": 7,
+      "nombre": "Taladro inalámbrico",
+      "descripcion": "Taladro inalámbrico con batería recargable, ideal para trabajos en casa.",
+      "peso": "2.00",
+      "volumen": "0.70",
+      "bultos": 1,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 30,
+    "fields": {
+      "cliente": 7,
+      "nombre": "Juego de brocas",
+      "descripcion": "Juego de brocas de diferentes tamaños para perforar diversos materiales.",
+      "peso": "0.50",
+      "volumen": "0.30",
+      "bultos": 5,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 31,
+    "fields": {
+      "cliente": 7,
+      "nombre": "Lijadora orbital",
+      "descripcion": "Lijadora orbital compacta para trabajos de acabado.",
+      "peso": "1.50",
+      "volumen": "0.40",
+      "bultos": 2,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 32,
+    "fields": {
+      "cliente": 8,
+      "nombre": "Pintura acrílica",
+      "descripcion": "Pintura acrílica de alta calidad, ideal para manualidades y arte.",
+      "peso": "0.75",
+      "volumen": "0.25",
+      "bultos": 20,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 33,
+    "fields": {
+      "cliente": 8,
+      "nombre": "Caballetes de pintura",
+      "descripcion": "Caballetes ajustables para soporte en trabajos artísticos.",
+      "peso": "3.00",
+      "volumen": "1.00",
+      "bultos": 5,
+      "fecha_ingreso": "2024-09-17T00:00:00Z"
+    }
+  },
+  {
+    "model": "productos.producto",
+    "pk": 34,
+    "fields": {
+      "cliente": 8,
+      "nombre": "Set de pinceles",
+      "descripcion": "Set de pinceles de diferentes tamaños para pintura.",
+      "peso": "0.50",
+      "volumen": "0.20",
+      "bultos": 10,
       "fecha_ingreso": "2024-09-17T00:00:00Z"
     }
   }

@@ -16,6 +16,7 @@
                     <th>Cliente</th>  
                     <th>Destinatario</th>   
                     <th>Localidad</th>
+                    <th>Estado</th>
                     <th>Accion</th> 
                 </tr>
             </thead>
@@ -26,6 +27,7 @@
                     <td>{{object.cliente | capfirst}}</td> 
                     <td>{{object.destinatario_nombre}}</td>  
                     <td>{{object.destinatario_localidad}}</td>
+                    <td> {{ object.tracking.last.get_estado_display }}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
                           <a href="{% url 'envios:envio_edit' object.id %}" type="button" class="btn btn-primary"><i class="bi-pencil-fill"></i></a>
